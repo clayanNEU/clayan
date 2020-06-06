@@ -1,0 +1,203 @@
+
+/* GLOBAL STYLES --------------------------------------------------------- */
+
+html {
+  box-sizing: border-box; /* ensures that padding and border are included in
+  the total width and height of the element. */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* inherit allows child elements to inherit the parent's
+  box-sizing instead of always resetting to border-box */
+}
+
+a {
+  color: yellow; /* all Links will be this color */
+}
+
+body {
+  color: #343434; /* text is this color */
+  background: green; /* background color */
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* refers to google fonts */
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* NAVIGATION BAR STYLES ---------------------------------------------------*/
+.navigation-bar {
+  width: 100%;
+  background-color: red;
+  overflow: auto;
+}
+/* Navigation links */
+.navigation-bar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* links on mouse-over */
+.navigation-bar a:hover {
+  background-color: green;
+  text-decoration: underline;
+}
+/* style the active link */
+.active {
+  background-color: grey;
+}
+
+
+h1 {
+  font-size: 70px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.content-wrap {
+  max-width: 800px; /* max even when browser window is larger */
+  width: 85%; /* so when sizing down, content is 85% of width */
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* PROFILE STYLES --------------------------------------------------------- */
+header {
+  background: grey;
+  color: white;
+}
+
+/* ABOUT INTRO STYLES --------------------------------------------------------- */
+.about-intro {
+  background: lightblue;
+}
+
+.about-intro a {
+  color: green; /* link color */
+}
+
+/* button to About Me page */
+.about-intro .btn {
+  color: blue;
+  background: red;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block; /* removes overlap for button */
+}
+
+.about-intro .btn:hover { /* button turns white when hovered over */
+  background: white;
+}
+
+.about-item {
+  overflow: hidden; /* If content overflows, hide it */
+}
+
+.about-item h3 {
+  margin-top: 0; /* removes space above h3 */
+}
+
+.about-item img { /* crops image to fit in container */
+  width: 240px; /* width of container */
+  height: 240px;
+  object-fit: cover; /* aspect ratio is preserved */
+  object-position: 50% 0%;
+}
+
+
+/* Work Experience Styles ------------------------------------------------ */
+.work-experience-intro {
+  background: #A1C6D7;
+}
+
+.work-experience-item img {
+  width: 240px; /* width of container */
+  height: 240px;
+  object-fit: cover; /* aspect ratio is preserved */
+  object-position: 50% 0%;
+}
+
+/* THOUGHTS INTRO ------------------------------------------------------- */
+.thoughts-intro { /*flexible background image */
+  background-image: url(../images/joanna-kosinska-unsplash.jpg);
+  background-size: cover; /* ensure it is covered */
+  background-position: top right; /* see the pencils stay */
+  padding-bottom: 100px;
+}
+
+/* Contact Styles --------------------------------------------------------- */
+
+footer {
+  background: #343434;
+  color: white;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list a {
+  padding: 15px; /* adds extra click space */
+  display: inline-block; /* adjust its position veritcally and horizontally */
+}
+
+/* Responsive Styles ---------------------------------------------- */
+
+@media screen and (min-width: 750px){
+
+  header, footer {
+    text-align: center;
+  }
+
+  /* float will only apply for view ports that area of 750 or larger */
+  .about-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .work-experience-item { /* Grid for work */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* second column will be twice the size of
+    the first column */
+    column-gap: 20px;
+  }
+
+  .contact-list { /* display with flex horizontally if bigger than 750 */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) { /* add it for the smaller screen sizes */
+  .navigation-bar a {
+    float: none; /* clear float */
+    display: block;
+  }
+
+  h1 {
+    font-size: 45px; /* smaller font size for smaller screen */
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px; /* less padding when stacked so looks nicer */
+  }
+}
