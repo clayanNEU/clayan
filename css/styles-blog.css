@@ -87,7 +87,7 @@ header {
   padding-bottom: 100px;
 }
 
-.post-6-10-2020 {
+.description {
   color: white;
 }
 
@@ -124,13 +124,8 @@ footer {
     text-align: center;
   }
 
-  /* float will only apply for view ports that area of 750 or larger */
-  .about-item img {
-    float: left;
-    margin-right: 20px;
-  }
 
-  .work-experience-item { /* Grid for work */
+  .blog-item { /* Grid for work */
     display: grid;
     grid-template-columns: 1fr 2fr; /* second column will be twice the size of
     the first column */
