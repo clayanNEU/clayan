@@ -98,7 +98,6 @@ header {
 }
 
 
-
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
@@ -124,6 +123,10 @@ footer {
     text-align: center;
   }
 
+  .grid-3-blog-item {
+    display: grid;
+    grid-template-columns: auto;
+  }
 
   .blog-item { /* Grid for work */
     display: grid;
