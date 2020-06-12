@@ -125,7 +125,7 @@ footer {
 
   .grid-3-blog-item {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
   }
 
   .blog-item { /* Grid for work */
