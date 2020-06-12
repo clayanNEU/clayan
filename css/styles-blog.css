@@ -103,9 +103,9 @@ header {
   padding-bottom: 100px;
 }
 
-.grid-3-blog-item img {
+.grid-3-blog-item .fall-pic {
   width: 230px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* Contact Styles --------------------------------------------------------- */
