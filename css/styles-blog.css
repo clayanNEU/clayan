@@ -97,6 +97,11 @@ header {
   padding-bottom: 100px;
 }
 
+.post-6-12-2020 { /*flexible background image */
+  background-image: url(../images/fall-background.jpg);
+  background-size: cover; /* ensure it is covered */
+  padding-bottom: 100px;
+}
 
 /* Contact Styles --------------------------------------------------------- */
 
