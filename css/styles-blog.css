@@ -103,13 +103,19 @@ header {
   padding-bottom: 100px;
 }
 
-.flex-3-blog-item .fall-pic img {
+.flex-3-blog-item .fall-pic-right img {
   width: 200px;
   height: 240px;
   object-fit: cover;
 }
 
-.flex-3-blog-item .fall-pic .fall-pic-mid img {
+.flex-3-blog-item .fall-pic-left img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.flex-3-blog-item .fall-pic-mid img {
   width: 280px;
   height: 220px;
   object-fit: cover;
