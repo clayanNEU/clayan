@@ -149,6 +149,7 @@ footer {
   .flex-3-blog-item {
     display: flex;
     height: 240px;
+    margin: 15px;
     align-content: space-between;
   }
 
