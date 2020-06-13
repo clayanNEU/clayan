@@ -103,7 +103,7 @@ header {
   padding-bottom: 100px;
 }
 
-.grid-3-blog-item .fall-pic {
+.grid-3-blog-item .fall-pic img {
   width: 140px;
   height: 140px;
   object-fit: cover;
