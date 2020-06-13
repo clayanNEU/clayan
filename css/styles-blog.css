@@ -109,6 +109,12 @@ header {
   object-fit: cover;
 }
 
+.flex-3-blog-item .fall-pic .fall-pic-mid {
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
@@ -136,7 +142,7 @@ footer {
 
   .flex-3-blog-item {
     display: flex;
-    height: 200px;
+    height: 240px;
   }
 
   .blog-item { /* Grid for work */
