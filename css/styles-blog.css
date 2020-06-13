@@ -109,7 +109,7 @@ header {
   object-fit: cover;
 }
 
-.flex-3-blog-item .fall-pic .fall-pic-mid {
+.flex-3-blog-item .fall-pic .fall-pic-mid img {
   width: 280px;
   height: 220px;
   object-fit: cover;
