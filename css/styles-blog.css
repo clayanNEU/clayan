@@ -104,8 +104,8 @@ header {
 }
 
 .flex-3-blog-item .fall-pic img {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 240px;
   object-fit: cover;
 }
 
