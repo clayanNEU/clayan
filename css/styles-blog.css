@@ -169,6 +169,7 @@ footer {
   .grid-blog-item {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 15px;
   }
 
   .flex-3-blog-item {
