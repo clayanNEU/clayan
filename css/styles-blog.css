@@ -123,13 +123,19 @@ header {
   object-fit: cover;
 }
 
-.grid-blog-item img {
+.grid-blog-item .winter-pic-left img {
   width: 200px;
   height: 300px;
   object-fit: cover;
 }
 
-.grid-blog-item {
+.grid-blog-item .winter-pic-right img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post-6-13-20 {
   background-image: url(../images/winter-neu.jpg);
   background-size: cover;
   padding-bottom: 50px;
