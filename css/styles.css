@@ -133,9 +133,9 @@ header {
 
 /* THOUGHTS INTRO ------------------------------------------------------- */
 .thoughts-intro { /*flexible background image */
-  background-image: url(../images/joanna-kosinska-unsplash.jpg);
+  background-image: url(../images/MILO-SHARK.png);
   background-size: cover; /* ensure it is covered */
-  background-position: top right; /* see the pencils stay */
+  background-position: bottom; /* see the pencils stay */
   padding-bottom: 100px;
 }
 
