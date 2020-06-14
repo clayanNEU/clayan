@@ -123,6 +123,18 @@ header {
   object-fit: cover;
 }
 
+.grid-blog-item img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.grid-blog-item {
+  background-image: url(../images/winter-neu.jpg);
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
@@ -146,6 +158,11 @@ footer {
 
   header, footer {
     text-align: center;
+  }
+
+  .grid-blog-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 
   .flex-3-blog-item {
