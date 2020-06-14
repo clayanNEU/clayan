@@ -139,6 +139,19 @@ header {
   padding-bottom: 100px;
 }
 
+.thoughts-intro .btn {
+  color: red;
+  background: blue;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block; /* removes overlap for button */
+}
+
+.thoughts-intro .btn:hover { /* button turns white when hovered over */
+  background: white;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
