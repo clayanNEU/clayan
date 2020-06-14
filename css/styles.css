@@ -135,7 +135,7 @@ header {
 .thoughts-intro { /*flexible background image */
   background-image: url(../images/MILO-SHARK.png);
   background-size: cover; /* ensure it is covered */
-  background-position: bottom; /* see the pencils stay */
+  background-position: 50% 70%
   padding-bottom: 100px;
 }
 
