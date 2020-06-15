@@ -166,6 +166,7 @@ header {
 
 .dropdown {
   float: left;
+  padding-right: 10px;
 }
 
 .dropdown2 {
