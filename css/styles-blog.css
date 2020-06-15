@@ -152,6 +152,7 @@ header {
   background-color: white;
   min-width: 200px
   box-shadow: 0px 20px 40px 0px rgba(100, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
