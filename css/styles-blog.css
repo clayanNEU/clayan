@@ -141,6 +141,36 @@ header {
   padding-bottom: 50px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px
+  box-shadow: 0px 20px 40px 0px rgba(100, 0, 0, 0.5);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.img-desc {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown2 {
+  float: right;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
