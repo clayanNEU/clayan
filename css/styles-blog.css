@@ -170,12 +170,15 @@ header {
 }
 
 .dropdown2 {
-  float: bottom right;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .post-6-14-2020 {
   background-color: rgba(38, 114, 114, 0.3);
-  padding-bottom: 100px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 /* Contact Styles --------------------------------------------------------- */
