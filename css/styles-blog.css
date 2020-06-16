@@ -178,6 +178,11 @@ header {
   padding-bottom: 20px;
 }
 
+.flex-2-item {
+  display: flex;
+  height: 500px;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
