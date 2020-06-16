@@ -184,7 +184,9 @@ header {
 }
 
 .ensenada-pic {
-  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-6-16-2020 {
