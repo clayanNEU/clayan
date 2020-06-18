@@ -183,6 +183,10 @@ header {
   height: 500px;
 }
 
+.flex-2-item .description {
+  margin-left: 50px;
+}
+
 .ensenada-pic {
   display: block;
   margin-left: auto;
