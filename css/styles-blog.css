@@ -164,23 +164,9 @@ header {
   text-align: center;
 }
 
-.dropdown {
-  float: left;
-  padding: 10px;
-}
-
-.dropdown2 {
-  float: bottom;
-}
-
 .post-6-14-2020 {
   background-color: rgba(38, 114, 114, 0.3);
   padding-bottom: 20px;
-}
-
-.flex-2-item {
-  display: flex;
-  height: 500px;
 }
 
 .flex-2-item .description {
@@ -198,6 +184,18 @@ header {
   background-image: url(../images/ensenada-background.jpg);
   background-size: cover;
   padding-bottom: 100px;
+}
+
+.float-spring-item img {
+  width: 230px;
+  height: 153px;
+  opacity: 0.5;
+}
+
+.float-spring-item img:hover {
+  width: 250px;
+  height: 165px;
+  opacity: 1;
 }
 
 /* Contact Styles --------------------------------------------------------- */
@@ -223,6 +221,21 @@ footer {
 
   header, footer {
     text-align: center;
+  }
+
+  .float-spring-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dropdown {
+    float: left;
+    padding: 10px;
+  }
+
+  .flex-2-item {
+    display: flex;
+    height: 500px;
   }
 
   .grid-blog-item {
