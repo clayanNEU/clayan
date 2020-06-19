@@ -32,7 +32,8 @@ body {
   background-color: red;
   overflow: auto;
   background-image: linear-gradient(to right, rgb(117, 205, 216), rgb(240, 242, 231),
-  rgb(255, 130, 150), rgb(255, 202, 39), rgb(255, 236, 0));
+  rgb(255, 130, 150), rgb(255, 202, 39));
+
 }
 /* Navigation links */
 .navigation-bar a {
@@ -45,7 +46,7 @@ body {
 }
 /* links on mouse-over */
 .navigation-bar a:hover {
-  background-color: green;
+  opacity: 0.2;
   text-decoration: underline;
 }
 /* style the active link */
@@ -79,7 +80,7 @@ h1, h2 {
 /* PROFILE STYLES --------------------------------------------------------- */
 header {
   background: grey;
-  background-image: linear-gradient(rgb(21, 178, 211), rgb(35, 110, 150));
+  background-image: linear-gradient(rgb(127, 215, 226), rgb(220, 222, 211));
   color: white;
 }
 
