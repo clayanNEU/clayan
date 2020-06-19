@@ -79,6 +79,7 @@ h1, h2 {
 /* PROFILE STYLES --------------------------------------------------------- */
 header {
   background: grey;
+  background-image: linear-gradient(rgb(21, 178, 211), rgb(35, 110, 150));
   color: white;
 }
 
