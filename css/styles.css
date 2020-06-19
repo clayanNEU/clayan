@@ -31,6 +31,8 @@ body {
   width: 100%;
   background-color: red;
   overflow: auto;
+  background-image: linear-gradient(to right, rgb(117, 205, 216), rgb(240, 242, 231),
+  rgb(255, 130, 150), rgb(255, 202, 39), rgb(255, 236, 0));
 }
 /* Navigation links */
 .navigation-bar a {
