@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  color: #343434; /* text is this color */
+  color: rgb(235, 235, 235); /* text is this color */
   background: green; /* background color */
   margin: 0;
   padding: 0;
@@ -25,14 +25,27 @@ body {
   line-height: 1.5;
 }
 
+/* buttons */
+.btn {
+  color: blue;
+  background: red;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block; /* removes overlap for button */
+}
+
+.btn:hover { /* button turns white when hovered over */
+  background: white;
+}
+
 
 /* NAVIGATION BAR STYLES ---------------------------------------------------*/
 .navigation-bar {
   width: 100%;
   background-color: red;
   overflow: auto;
-  background-image: linear-gradient(to right, rgb(117, 205, 216), rgb(240, 242, 231),
-  rgb(255, 130, 150), rgb(255, 202, 39));
+  background-image: radial-gradient(closest-side at 14% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
 
 }
 /* Navigation links */
@@ -54,21 +67,29 @@ body {
   background-color: grey;
 }
 
+/*Header font styles*/
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+}
 
 h1 {
   font-size: 70px;
   line-height: 1;
+  margin: 0;
 }
 
 h2 {
+  color: rgb(100, 100, 100);
   font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-h1, h2 {
-  font-family: 'Caveat', cursive;
-  font-weight: 400;
-  margin: 0;
+h3 {
+ margin-top: 0; /* removes space above h3 */
 }
+
 
 .content-wrap {
   max-width: 800px; /* max even when browser window is larger */
@@ -80,39 +101,21 @@ h1, h2 {
 /* PROFILE STYLES --------------------------------------------------------- */
 header {
   background: grey;
-  background-image: linear-gradient(rgb(127, 215, 226), rgb(220, 222, 211));
+  background-image: linear-gradient(rgb(117, 205, 216), rgb(240, 242, 231));
   color: white;
 }
 
 /* ABOUT INTRO STYLES --------------------------------------------------------- */
 .about-intro {
-  background: lightblue;
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(255, 130, 150));
 }
 
 .about-intro a {
   color: green; /* link color */
 }
 
-/* buttons */
-.btn {
-  color: blue;
-  background: red;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
-  display: inline-block; /* removes overlap for button */
-}
-
-.btn:hover { /* button turns white when hovered over */
-  background: white;
-}
-
 .about-item {
   overflow: hidden; /* If content overflows, hide it */
-}
-
-.about-item h3 {
-  margin-top: 0; /* removes space above h3 */
 }
 
 .about-item img { /* crops image to fit in container */
@@ -125,7 +128,7 @@ header {
 
 /* Work Experience Styles ------------------------------------------------ */
 .work-experience-intro {
-  background: #A1C6D7;
+  background-image: linear-gradient(rgb(255, 130, 150), rgb(255, 202, 39));
 }
 
 .work-experience-item img {
@@ -143,11 +146,20 @@ header {
   padding-bottom: 100px;
 }
 
+.thoughts-item {
+  background-color: rgba(55, 202, 206, 0.4);
+  border-radius: 5px;
+}
+
+.thoughts-item:hover {
+  background-color: rgba(55, 202, 206, 0.8);
+}
+
 
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
-  background: #343434;
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(117, 205, 216));
   color: white;
 }
 
@@ -169,10 +181,10 @@ footer {
     text-align: center;
   }
 
-  /* float will only apply for view ports that area of 750 or larger */
-  .about-item img {
-    float: left;
-    margin-right: 20px;
+  .about-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0px;
   }
 
   .work-experience-item { /* Grid for work */
