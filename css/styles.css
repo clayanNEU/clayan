@@ -27,16 +27,17 @@ body {
 
 /* buttons */
 .btn {
-  color: blue;
-  background: red;
+  color: white;
+  background: none;
   text-decoration: none;
   padding: 8px;
-  border-radius: 4px;
+  outline-style: outset;
   display: inline-block; /* removes overlap for button */
 }
 
 .btn:hover { /* button turns white when hovered over */
-  background: white;
+  opacity: 0.5;
+  outline-style: dotted;
 }
 
 
@@ -108,10 +109,6 @@ header {
 /* ABOUT INTRO STYLES --------------------------------------------------------- */
 .about-intro {
   background-image: linear-gradient(rgb(240, 242, 231), rgb(255, 130, 150));
-}
-
-.about-intro a {
-  color: green; /* link color */
 }
 
 .about-item {
