@@ -145,8 +145,8 @@ header {
 
 .thoughts-item {
   background-color: rgba(255, 130, 150, 0.4);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 7px;
+  padding: 12px;
 }
 
 .thoughts-item:hover {
