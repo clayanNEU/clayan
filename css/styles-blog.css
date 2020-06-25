@@ -78,7 +78,7 @@ header {
 /* CONTENT STYLES ---------------------------------------------------------*/
 .blog-item img {
   width: 400px; /* width of container */
-  height: 240px;
+  height: auto;
   object-fit: cover; /* aspect ratio is preserved */
   object-position: 20% 0%;
 }
