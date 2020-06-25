@@ -25,6 +25,8 @@ body {
   width: 100%;
   background-color: red;
   overflow: auto;
+  background-image: radial-gradient(closest-side at 14% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+
 }
 /* Navigation links */
 .navigation-bar a {
@@ -37,7 +39,7 @@ body {
 }
 /* links on mouse-over */
 .navigation-bar a:hover {
-  background-color: green;
+  opacity: 0.2;
   text-decoration: underline;
 }
 /* style the active link */
@@ -272,6 +274,7 @@ footer {
   .navigation-bar a {
     float: none; /* clear float */
     display: block;
+    background-image: radial-gradient(closest-side at 50% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
   }
 
   h1 {
