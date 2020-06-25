@@ -176,11 +176,9 @@ header {
 }
 
 .ensenada-pic {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 60%;
   height: auto; /*scales image*/
+
 }
 
 .post-6-16-2020 {
