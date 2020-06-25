@@ -202,6 +202,7 @@ footer {
   .navigation-bar a {
     float: none; /* clear float */
     display: block;
+    background-image: radial-gradient(closest-side at 50% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
   }
 
   h1 {
