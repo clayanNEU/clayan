@@ -19,6 +19,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: yellow; /* all Links will be this color */
+}
+
 
 /* NAVIGATION BAR STYLES ---------------------------------------------------*/
 .navigation-bar {
@@ -206,7 +210,7 @@ header {
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
-  background: #343434;
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(117, 205, 216));
   color: white;
 }
 
