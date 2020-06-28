@@ -107,7 +107,11 @@ header {
 }
 
 /* Body styles ---------------------------------------------------------- */
-
+.job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgb(130, 156, 208);
+}
 
 
 /* Contact Styles --------------------------------------------------------- */
