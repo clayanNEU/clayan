@@ -111,17 +111,18 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: rgb(130, 156, 208);
+  margin: 20px;
 }
 
 .divider > section { /*divider between job-items*/
   overflow: hidden;
-  border-bottom: 4px ridge rgba(100, 100, 100, 0.6);
+  border-bottom: 5px ridge rgba(100, 100, 100, 0.6);
   padding: 25px 0;
-  animation: divider-color 6s infinite;
+  animation: divider-color 5s infinite;
 }
 
 @keyframes divider-color { /* changes border colors*/
-  from {border-color: rgba(19, 153, 198, 0.5);}
+  from {border-color: rgba(19, 153, 198, 0.7);}
   to {border-color: rgba(14, 140, 127, 0.7);}
 }
 
@@ -133,6 +134,16 @@ header {
   margin-top: 0;
   margin-left: 25px;
   font-style: italic;
+  line-height: 1.2;
+}
+
+.job-description {
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+.job-details {
+  margin-left: 30px;
 }
 
 .job-details > p {
@@ -141,10 +152,11 @@ header {
 
 .job-details > h3 {
   font-style: oblique;
+  line-height: 1;
 }
 
 .job-description ul > li {
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 10px;
 }
 
