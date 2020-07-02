@@ -1,2 +1,4 @@
-var date = new Date();
-document.body.innerHTML = "<h1>Today is: " + date + "</h1>";
+// JAVASCRIPT DOC
+function underConstruction() {
+  alert("Under Construction :), please check out my resume or blog!!");
+}
