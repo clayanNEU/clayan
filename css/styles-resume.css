@@ -17,7 +17,7 @@ a {
 
 body {
   color: rgb(235, 235, 235); /* text is this color */
-  background: green; /* background color */
+  background: rgb(117, 175, 226); /* background color */
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif; /* refers to google fonts */
@@ -46,7 +46,7 @@ body {
   width: 100%;
   background-color: red;
   overflow: auto;
-  background-image: radial-gradient(closest-side at 14% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+  background-image: radial-gradient(closest-side at 14% 50%, rgb(90, 150, 200) 60%, rgb(117, 175, 226));
 
 }
 /* Navigation links */
@@ -102,7 +102,7 @@ h3 {
 /* PROFILE STYLES --------------------------------------------------------- */
 header {
   background: grey;
-  background-image: linear-gradient(rgb(117, 205, 216), rgb(240, 242, 231));
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(117, 175, 226));
   color: white;
 }
 
@@ -117,7 +117,7 @@ header {
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
-  background-image: linear-gradient(rgb(240, 242, 231), rgb(117, 205, 216));
+  background-image: linear-gradient(rgb(117, 175, 226), rgb(240, 242, 231));
   color: white;
 }
 
