@@ -113,6 +113,41 @@ header {
   background-color: rgb(130, 156, 208);
 }
 
+.divider > section { /*divider between job-items*/
+  overflow: hidden;
+  border-bottom: 4px ridge rgba(100, 100, 100, 0.6);
+  padding: 25px 0;
+  animation: divider-color 6s infinite;
+}
+
+@keyframes divider-color { /* changes border colors*/
+  from {border-color: rgba(19, 153, 198, 0.5);}
+  to {border-color: rgba(14, 140, 127, 0.7);}
+}
+
+.divider > section:last-of-type { /* don't include border for last item*/
+  border: none;
+}
+
+.job-description > p {
+  margin-top: 0;
+  margin-left: 25px;
+  font-style: italic;
+}
+
+.job-details > p {
+  line-height: 1;
+}
+
+.job-details > h3 {
+  font-style: oblique;
+}
+
+.job-description ul > li {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
 
 /* Contact Styles --------------------------------------------------------- */
 
