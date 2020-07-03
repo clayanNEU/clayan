@@ -201,6 +201,14 @@ footer {
     background-image: radial-gradient(closest-side at 50% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
   }
 
+.job-item {
+  display: block;
+}
+
+.job-details {
+  margin-bottom: 15px;
+}
+
   h1 {
     font-size: 45px; /* smaller font size for smaller screen */
     line-height: 0.9;
