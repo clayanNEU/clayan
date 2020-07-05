@@ -182,6 +182,7 @@ header {
 .ensenada-pic {
   width: 60%;
   height: auto; /*scales image*/
+  border-radius: 5px;
 
 }
 
