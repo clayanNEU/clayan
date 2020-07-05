@@ -287,6 +287,13 @@ footer {
   h2 {
     line-height: 1;
   }
+
+  .ensenada-pic {
+    width: 200px;
+    height: 100px;
+
+  }
+
   .contact-list a {
     padding: 5px; /* less padding when stacked so looks nicer */
   }
