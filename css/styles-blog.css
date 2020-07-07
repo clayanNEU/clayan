@@ -208,6 +208,10 @@ header {
   background-color: rgb(245, 173, 148);
 }
 
+.post-7-5-2020 {
+  background-color: rgb(245, 173, 148);
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
@@ -231,6 +235,11 @@ footer {
 
   header, footer {
     text-align: center;
+  }
+
+  .regular-float-item {
+    display: float;
+    
   }
 
   .float-spring-item {
