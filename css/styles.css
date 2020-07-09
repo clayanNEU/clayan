@@ -20,7 +20,7 @@ body {
   background: grey; /* background color */
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif; /* refers to google fonts */
+  font-family: 'Raleway', sans-serif; /* refers to google fonts */
   font-size: 18px;
   line-height: 1.5;
 }
@@ -70,7 +70,7 @@ body {
 
 /*Header font styles*/
 h1, h2 {
-  font-family: 'Caveat', cursive;
+  font-family: 'Righteous', cursive;
   font-weight: 400;
 }
 
