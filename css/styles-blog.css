@@ -180,11 +180,10 @@ header {
 }
 
 .ensenada-pic {
-  width: 60%;
-  height: auto; /*scales image*/
-  border-radius: 5px;
-
+  width: 100px;
+  height: 60px;
 }
+
 
 .post-6-16-2020 {
   background-image: url(../images/ensenada-background.jpg);
@@ -296,12 +295,6 @@ footer {
   }
   h2 {
     line-height: 1;
-  }
-
-  .ensenada-pic {
-    width: 130px;
-    height: 80px;
-
   }
 
   .contact-list a {
