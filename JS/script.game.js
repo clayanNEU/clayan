@@ -1,9 +1,11 @@
 // JAVASCRIPT DOC
 var myGamePiece;
+var myObstacle;
 
 function startGame() {
   myGameArea.start();
   myGamePiece = new component(30, 30, "red", 10, 120);
+  myObstacle = new component(10, 200, "green", 300, 120);
 }
 
 var myGameArea = {
@@ -18,6 +20,9 @@ var myGameArea = {
   },
   clear : function() { // clears the canvas
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  },
+  stop : function() { // stops game
+    clearInterval(this.interval);
   }
 }
 
@@ -38,12 +43,35 @@ function component(width, height, color, x, y) {
     this.x += this.speedX;
     this.y += this.speedY;
   }
+  this.crashWith = function(otherobj) {
+    var myleft = this.x;
+    var myright = this.x + (this.width);
+    var mytop = this.y;
+    var mybottom = this.y + (this.height);
+    var otherleft = otherobj.x;
+    var otherright = otherobj.x + (otherobj.width);
+    var othertop = otherobj.y;
+    var otherbottom = otherobj.y + (otherobj.height);
+    var crash = true;
+    if ((mybottom < othertop) ||
+  (mytop > otherbottom) ||
+(myright < otherleft) ||
+(myleft > otherright)) {
+  crash = false;
+}
+return crash;
+  }
 }
 
-function updateGameArea() {
+function updateGameArea() { // update for every frame
+  if (myGamePiece.crashWith(myObstacle)) {
+    myGameArea.stop();
+  } else {
   myGameArea.clear();
+  myObstacle.update();
   myGamePiece.newPos();
   myGamePiece.update();
+}
 }
 
 function moveup() {
