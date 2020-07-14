@@ -1,0 +1,225 @@
+
+
+canvas {
+  border: 1px solid #d3d3d3;
+  background-color: #f1f1f1;
+}
+
+/* GLOBAL STYLES --------------------------------------------------------- */
+
+html {
+  box-sizing: border-box; /* ensures that padding and border are included in
+  the total width and height of the element. */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* inherit allows child elements to inherit the parent's
+  box-sizing instead of always resetting to border-box */
+}
+
+a {
+  color: yellow; /* all Links will be this color */
+}
+
+body {
+  color: rgb(235, 235, 235); /* text is this color */
+  background: grey; /* background color */
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif; /* refers to google fonts */
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* buttons */
+.btn {
+  color: white;
+  background: none;
+  text-decoration: none;
+  padding: 8px;
+  outline-style: outset;
+  display: inline-block; /* removes overlap for button */
+}
+
+.btn:hover { /* button turns white when hovered over */
+  opacity: 0.5;
+  outline-style: dotted;
+}
+
+
+/* NAVIGATION BAR STYLES ---------------------------------------------------*/
+.navigation-bar {
+  width: 100%;
+  background-color: red;
+  overflow: auto;
+  background-image: radial-gradient(closest-side at 14% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+
+}
+/* Navigation links */
+.navigation-bar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* links on mouse-over */
+.navigation-bar a:hover {
+  opacity: 0.2;
+  text-decoration: underline;
+}
+/* style the active link */
+.active {
+  background-color: grey;
+}
+
+/*Header font styles*/
+h1, h2 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1;
+  margin: 0;
+}
+
+h2 {
+  color: rgb(100, 100, 100);
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h3 {
+ margin-top: 0; /* removes space above h3 */
+}
+
+
+.content-wrap {
+  max-width: 800px; /* max even when browser window is larger */
+  width: 85%; /* so when sizing down, content is 85% of width */
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* PROFILE STYLES --------------------------------------------------------- */
+header {
+  background: grey;
+  background-image: linear-gradient(rgb(117, 205, 216), rgb(240, 242, 231));
+  color: white;
+}
+
+/* ABOUT INTRO STYLES --------------------------------------------------------- */
+.about-intro {
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(255, 130, 150));
+}
+
+.about-item {
+  overflow: hidden; /* If content overflows, hide it */
+}
+
+.about-item img { /* crops image to fit in container */
+  width: 240px; /* width of container */
+  height: 240px;
+  object-fit: cover; /* aspect ratio is preserved */
+  object-position: 50% 0%;
+}
+
+
+/* Work Experience Styles ------------------------------------------------ */
+.work-experience-intro {
+  background-image: linear-gradient(rgb(255, 130, 150), rgb(255, 202, 39));
+}
+
+.work-experience-item img {
+  width: 240px; /* width of container */
+  height: 240px;
+  object-fit: cover; /* aspect ratio is preserved */
+  object-position: 50% 0%;
+}
+
+/* THOUGHTS INTRO ------------------------------------------------------- */
+.thoughts-intro { /*flexible background image */
+  background-image: url(../images/MILO-SHARK.png);
+  background-size: cover; /* ensure it is covered */
+  background-position: 50% 82%;
+  padding-bottom: 100px;
+}
+
+.thoughts-item {
+  background-color: rgba(255, 130, 150, 0.4);
+  border-radius: 7px;
+  padding: 12px;
+}
+
+.thoughts-item:hover {
+  background-image: linear-gradient(rgb(255, 130, 150), rgb(240, 242, 231));
+}
+
+
+/* Contact Styles --------------------------------------------------------- */
+
+footer {
+  background-image: linear-gradient(rgb(240, 242, 231), rgb(117, 205, 216));
+  color: white;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list a {
+  padding: 15px; /* adds extra click space */
+  display: inline-block; /* adjust its position veritcally and horizontally */
+}
+
+/* Responsive Styles ---------------------------------------------- */
+
+@media screen and (min-width: 750px){
+
+  header, footer {
+    text-align: center;
+  }
+
+  .about-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0px;
+  }
+
+  .work-experience-item { /* Grid for work */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* second column will be twice the size of
+    the first column */
+    column-gap: 20px;
+  }
+
+  .contact-list { /* display with flex horizontally if bigger than 750 */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) { /* add it for the smaller screen sizes */
+  .navigation-bar a {
+    float: none; /* clear float */
+    display: block;
+    background-image: radial-gradient(closest-side at 50% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+  }
+
+  h1 {
+    font-size: 45px; /* smaller font size for smaller screen */
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px; /* less padding when stacked so looks nicer */
+  }
+}
