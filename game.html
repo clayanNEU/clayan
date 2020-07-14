@@ -13,11 +13,14 @@
   <body onload="startGame()">
 
     <div class="buttons">
-      <button onclick="moveup()">UP</button><br><br>
-      <button onclick="moveleft()">LEFT</button>
-      <button onclick="moveright()">RIGHT</button><br><br>
-      <button onclick="movedown()">DOWN</button>
-
+      <button onmousedown="moveup()" onmouseup="stopMove()" ontouchstart="moveup()">
+        UP</button><br><br>
+      <button onmousedown="moveleft()" onmouseup="stopMove()" ontouchstart="moveleft()">
+        LEFT</button>
+      <button onmousedown="moveright()" onmouseup="stopMove()" ontouchstart="moveright()">
+        RIGHT</button><br><br>
+      <button onmousedown="movedown()" onmouseup="stopMove()" ontouchstart="movedown()">
+        DOWN</button>
     </div>
 
     <!-- Navigation panel -->

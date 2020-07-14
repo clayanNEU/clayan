@@ -5,6 +5,11 @@ canvas {
   background-color: #f1f1f1;
 }
 
+.buttons {
+  text-align: center;
+  width: 480px;
+}
+
 /* GLOBAL STYLES --------------------------------------------------------- */
 
 html {
