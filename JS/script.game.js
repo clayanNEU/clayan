@@ -1,6 +1,6 @@
 // JAVASCRIPT DOC
 var myGamePiece;
-var myObstacle;
+var myObstacles = [];
 
 function startGame() {
   myGameArea.start();
@@ -15,6 +15,8 @@ var myGameArea = {
     this.canvas.height = 270;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    // counts frames
+    this.frameNo = 0;
     // run this every 20th milisecond
     this.interval = setInterval(updateGameArea, 20);
   },
@@ -44,6 +46,7 @@ function component(width, height, color, x, y) {
     this.y += this.speedY;
   }
   this.crashWith = function(otherobj) {
+    // checks if component crashes w another component
     var myleft = this.x;
     var myright = this.x + (this.width);
     var mytop = this.y;
@@ -64,15 +67,29 @@ return crash;
 }
 
 function updateGameArea() { // update for every frame
-  if (myGamePiece.crashWith(myObstacle)) {
-    myGameArea.stop();
-  } else {
-  myGameArea.clear();
-  myObstacle.update();
-  myGamePiece.newPos();
-  myGamePiece.update();
-}
-}
+  var x, y;
+  for (i = 0; i < myObstacles.length; i++) {
+    // loop through every obstacle to check for crash
+        if (myGamePiece.crashWith(myObstacles[i])) {
+          myGameArea.stop();
+          return;
+        }
+      }
+      myGameArea.clear();
+      myGameArea.frameNo += 1;
+      if (myGameArea.frameNo == 1 || everyInterval(150)) {
+        // counts framed and adds an obstacle for every 150th frame
+        x = myGameArea.canvas.width;
+        y = myGameArea.canvas.height - 200
+        myObstacles.push(new component(10, 200, "green", x, y));
+      }
+      for (i = 0; i < myObstacles.length; i++) {
+        myObstacles[i].x += -1;
+        myObstacles[i].update();
+      }
+      myGamePiece.newPos();
+      myGamePiece.update();
+    }
 
 function moveup() {
   myGamePiece.speedY -= 1;
@@ -93,4 +110,10 @@ function moveright() {
 function stopMove() {
   myGamePiece.speedX = 0;
   myGamePiece.speedY = 0;
+}
+
+// returns true if the current framenumber corresponds w the given interval
+function everyInterval(n) {
+  if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+  return false;
 }
