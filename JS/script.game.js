@@ -1,10 +1,12 @@
 // JAVASCRIPT DOC
 var myGamePiece;
 var myObstacles = [];
+var myScore;
 
 function startGame() {
   myGameArea.start();
   myGamePiece = new component(30, 30, "red", 10, 120);
+  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
 }
 
 var myGameArea = {
@@ -28,7 +30,8 @@ var myGameArea = {
 }
 
 // Component creator
-function component(width, height, color, x, y) {
+function component(width, height, color, x, y, type) {
+  this.type = type;
   this.width = width;
   this.height = height;
   this.speedX = 0; // speed indicators
@@ -37,8 +40,14 @@ function component(width, height, color, x, y) {
   this.y = y;
   this.update = function() { // handles drawing of the component
     ctx = myGameArea.context;
-    ctx.fillStyle = color;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    if (this.type == "text") {
+      ctx.font = this.width + " " + this.height;
+      ctx.fillStyle = color;
+      ctx.fillText(this.text, this.x, this.y);
+    } else {
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
   }
   this.newPos = function() {
     this.x += this.speedX;
@@ -89,11 +98,13 @@ function updateGameArea() { // update for every frame
         myObstacles.push(new component(10, height, "green", x, 0));
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
       }
-      
+
       for (i = 0; i < myObstacles.length; i++) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
       }
+      myScore.text = "SCORE: " + myGameArea.frameNo;
+      myScore.update();
       myGamePiece.newPos();
       myGamePiece.update();
     }
