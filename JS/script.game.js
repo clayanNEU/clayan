@@ -2,11 +2,13 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var myBackground;
 
 function startGame() {
-  myGameArea.start();
   myGamePiece = new component(30, 30, "red", 10, 120);
   myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+  myBackground = new component(480, 270, "images/MILO-BANANA.png", 0, 0, "image");
+  myGameArea.start();
 }
 
 var myGameArea = {
@@ -32,6 +34,10 @@ var myGameArea = {
 // Component creator
 function component(width, height, color, x, y, type) {
   this.type = type;
+  if (type == "image") {
+    this.image = new Image();
+    this.image.src = color;
+  }
   this.width = width;
   this.height = height;
   this.speedX = 0; // speed indicators
@@ -44,6 +50,8 @@ function component(width, height, color, x, y, type) {
       ctx.font = this.width + " " + this.height;
       ctx.fillStyle = color;
       ctx.fillText(this.text, this.x, this.y);
+    } else if (this.type == "image") {
+      ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     } else {
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -76,6 +84,7 @@ return crash;
 
 function updateGameArea() { // update for every frame
   var x, y;
+
   for (i = 0; i < myObstacles.length; i++) {
     // loop through every obstacle to check for crash
         if (myGamePiece.crashWith(myObstacles[i])) {
@@ -84,6 +93,9 @@ function updateGameArea() { // update for every frame
         }
       }
       myGameArea.clear();
+      // updates so background is in the back
+      myBackground.newPos();
+      myBackground.update();
       myGameArea.frameNo += 1;
 
       // obstacle of random sizes
@@ -104,9 +116,10 @@ function updateGameArea() { // update for every frame
         myObstacles[i].update();
       }
       myScore.text = "SCORE: " + myGameArea.frameNo;
-      myScore.update();
+
       myGamePiece.newPos();
       myGamePiece.update();
+      myScore.update();
     }
 
 function moveup() {
