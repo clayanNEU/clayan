@@ -5,7 +5,6 @@ var myObstacles = [];
 function startGame() {
   myGameArea.start();
   myGamePiece = new component(30, 30, "red", 10, 120);
-  myObstacle = new component(10, 200, "green", 300, 120);
 }
 
 var myGameArea = {
@@ -77,12 +76,20 @@ function updateGameArea() { // update for every frame
       }
       myGameArea.clear();
       myGameArea.frameNo += 1;
+
+      // obstacle of random sizes
       if (myGameArea.frameNo == 1 || everyInterval(150)) {
-        // counts framed and adds an obstacle for every 150th frame
         x = myGameArea.canvas.width;
-        y = myGameArea.canvas.height - 200
-        myObstacles.push(new component(10, 200, "green", x, y));
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
       }
+      
       for (i = 0; i < myObstacles.length; i++) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
