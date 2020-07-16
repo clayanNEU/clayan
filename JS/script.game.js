@@ -3,11 +3,16 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var myBackground;
+var crashSound;
+var myMusic;
 
 function startGame() {
   myGamePiece = new component(30, 30, "red", 10, 120);
   myScore = new component("30px", "Consolas", "black", 280, 40, "text");
   myBackground = new component(480, 270, "images/MILO-BANANA.png", 0, 0, "background");
+  crashSound = new sound("sounds/splat.mp3");
+  myMusic = new sound("sounds/forest.mp3");
+  myMusic.play();
   myGameArea.start();
 }
 
@@ -98,7 +103,9 @@ function updateGameArea() { // update for every frame
   for (i = 0; i < myObstacles.length; i++) {
     // loop through every obstacle to check for crash
         if (myGamePiece.crashWith(myObstacles[i])) {
+          crashSound.play();
           myGameArea.stop();
+          myMusic.stop();
           return;
         }
       }
@@ -152,6 +159,22 @@ function moveright() {
 function stopMove() {
   myGamePiece.speedX = 0;
   myGamePiece.speedY = 0;
+}
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function() {
+    this.sound.play();
+  }
+  this.stop = function () {
+    this.sound.pause();
+  }
+
 }
 
 // returns true if the current framenumber corresponds w the given interval
