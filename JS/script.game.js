@@ -4,11 +4,12 @@ var myObstacles = [];
 var myScore;
 var myBackground;
 var crashSound;
+var myRewards = [];
 
 function startGame() {
-  myGamePiece = new component(30, 30, "red", 10, 120);
-  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-  myBackground = new component(480, 270, "images/MILO-BANANA.png", 0, 0, "background");
+  myGamePiece = new component(35, 60, "images/milo-sponge.png", 10, 120, "image");
+  myScore = new component("30px", "Consolas", "white", 280, 40, "text");
+  myBackground = new component(680, 400, "images/MILO-BANANA.png", 0, 0, "background");
   crashSound = new sound("sounds/splat.mp3");
   myGameArea.start();
 }
@@ -16,8 +17,8 @@ function startGame() {
 var myGameArea = {
   canvas : document.createElement("canvas"),
   start : function() {
-    this.canvas.width = 480;
-    this.canvas.height = 270;
+    this.canvas.width = 680;
+    this.canvas.height = 400;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     // counts frames
@@ -46,6 +47,7 @@ function component(width, height, color, x, y, type) {
   this.speedY = 0;
   this.gravity = 0.03;
   this.gravitySpeed = 0;
+  this.bounce = 0.6;
   this.x = x;
   this.y = y;
   this.update = function() { // handles drawing of the component
@@ -78,6 +80,7 @@ function component(width, height, color, x, y, type) {
       this.y += this.speedY + this.gravitySpeed;
       this.gravitySpeed += this.gravity;
       this.hitBottom();
+
     }
   }
   // ensures nothing drops out of the game
@@ -85,8 +88,11 @@ function component(width, height, color, x, y, type) {
     var rockbottom = myGameArea.canvas.height - this.height;
     if (this.y > rockbottom) {
       this.y = rockbottom;
+      this.gravitySpeed = -(this.gravitySpeed * this.bounce);
     }
   }
+
+
   this.crashWith = function(otherobj) {
     // checks if component crashes w another component
     var myleft = this.x;
@@ -104,6 +110,7 @@ function component(width, height, color, x, y, type) {
 (myleft > otherright)) {
   crash = false;
 }
+
 return crash;
   }
 }
@@ -132,7 +139,7 @@ function updateGameArea() { // update for every frame
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
+        minGap = 80;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "green", x, 0));
