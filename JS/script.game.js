@@ -44,6 +44,8 @@ function component(width, height, color, x, y, type) {
   this.height = height;
   this.speedX = 0; // speed indicators
   this.speedY = 0;
+  this.gravity = 0.03;
+  this.gravitySpeed = 0;
   this.x = x;
   this.y = y;
   this.update = function() { // handles drawing of the component
@@ -63,14 +65,26 @@ function component(width, height, color, x, y, type) {
       ctx.fillRect(this.x, this.y, this.width, this.height);
     }
   }
+
   this.newPos = function() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    // loops the background
+
+    // loops the background and doesn's fall to gravity
     if (this.type == "background") {
       if (this.x == -(this.width)) {
         this.x = 0;
       }
+    } else {
+      this.x += this.speedX;
+      this.y += this.speedY + this.gravitySpeed;
+      this.gravitySpeed += this.gravity;
+      this.hitBottom();
+    }
+  }
+  // ensures nothing drops out of the game
+  this.hitBottom = function () {
+    var rockbottom = myGameArea.canvas.height - this.height;
+    if (this.y > rockbottom) {
+      this.y = rockbottom;
     }
   }
   this.crashWith = function(otherobj) {
@@ -170,7 +184,10 @@ function sound(src) {
   this.stop = function () {
     this.sound.pause();
   }
+}
 
+function accelerate(n) {
+  myGamePiece.gravity = n;
 }
 
 // returns true if the current framenumber corresponds w the given interval
