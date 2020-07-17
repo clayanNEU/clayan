@@ -113,6 +113,7 @@ function component(width, height, color, x, y, type) {
 
 return crash;
   }
+
 }
 
 function updateGameArea() { // update for every frame
@@ -126,6 +127,15 @@ function updateGameArea() { // update for every frame
           return;
         }
       }
+
+      for (i = 0; i < myRewards.length; i++) {
+        // loop through every reward to see if character caught it
+            if (myGamePiece.crashWith(myRewards[i])) {
+              crashSound.play();
+              myGameArea.frameNo += 10;
+            }
+          }
+
       myGameArea.clear();
       // updates so background is in the back
       myBackground.speedX = -1;
@@ -150,11 +160,30 @@ function updateGameArea() { // update for every frame
         myObstacles[i].x += -1;
         myObstacles[i].update();
       }
+
+      // rewards at random places
+      if (myGameArea.frameNo == 1 || everyInterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 80;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myRewards.push(new component(35, 40, "images/bananas.png", x, height + gap, "image"));
+      }
+
+      for (i = 0; i < myRewards.length; i++) {
+        myRewards[i].x += -1;
+        myRewards[i].update();
+      }
+
       myScore.text = "SCORE: " + myGameArea.frameNo;
 
       myGamePiece.newPos();
       myGamePiece.update();
       myScore.update();
+
     }
 
 function moveup() {
