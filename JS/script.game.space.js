@@ -7,9 +7,9 @@ var crashSound;
 var myRewards = [];
 
 function startGame() {
-  myGamePiece = new component(35, 60, "images/game/milo-sponge.png", 10, 120, "image");
-  myScore = new component("30px", "Consolas", "white", 280, 40, "text");
-  myBackground = new component(680, 400, "images/MILO-BANANA.png", 0, 0, "background");
+  myGamePiece = new component(60, 60, "images/game/space-milo.png", 10, 120, "image");
+  myScore = new component("30px", "Consolas", "white", 260, 40, "text");
+  myBackground = new component(680, 400, "images/game/space-bg.jpg", 0, 0, "background");
   crashSound = new sound("sounds/splat.mp3");
   myGameArea.start();
 }
@@ -46,9 +46,10 @@ function component(width, height, color, x, y, type) {
   this.height = height;
   this.speedX = 0; // speed indicators
   this.speedY = 0;
-  this.gravity = 0.03;
+  this.gravity = 0;
   this.gravitySpeed = 0;
-  this.bounce = 0.6;
+  this.bounce = 0.3;
+  this.angle = 0;
   this.x = x;
   this.y = y;
   this.update = function() { // handles drawing of the component
@@ -58,7 +59,11 @@ function component(width, height, color, x, y, type) {
       ctx.fillStyle = color;
       ctx.fillText(this.text, this.x, this.y);
     } else if (this.type == "image" || type == "background") {
-      ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.drawImage(this.image, this.width / -2, this.height / -2, this.width, this.height);
+      ctx.restore();
       // draws the next background
       if (type == "background") {
         ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
@@ -147,14 +152,14 @@ function updateGameArea() { // update for every frame
       // obstacle of random sizes
       if (myGameArea.frameNo == 1 || everyInterval(150)) {
         x = myGameArea.canvas.width;
-        minHeight = 20;
+        minHeight = 50;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 150;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(10, height, "#43638a", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "#9F45B0", x, height + gap));
       }
 
       for (i = 0; i < myObstacles.length; i++) {
@@ -165,13 +170,13 @@ function updateGameArea() { // update for every frame
       // rewards at random places
       if (myGameArea.frameNo == 1 || everyInterval(150)) {
         x = myGameArea.canvas.width;
-        minHeight = 20;
+        minHeight = 50;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 150;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myRewards.push(new component(35, 40, "images/game/bananas.png", x, height + gap, "image"));
+        myRewards.push(new component(35, 40, "images/game/star.png", x, height + gap, "image"));
       }
 
       for (i = 0; i < myRewards.length; i++) {
@@ -182,6 +187,8 @@ function updateGameArea() { // update for every frame
       myScore.text = "SCORE: " + myGameArea.frameNo;
 
       myGamePiece.newPos();
+      // rotate
+      myGamePiece.angle += 1 * Math.PI / 180;
       myGamePiece.update();
       myScore.update();
 

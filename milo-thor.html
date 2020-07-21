@@ -8,16 +8,29 @@
     <!-- Link for google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-game.css">
-    <script src="JS/script.game.js"></script>
+    <script src="JS/script.game.thor.js"></script>
   </head>
+
+  <div class="buttons">
+    <button onmousedown="moveleft()" onmouseup="stopMove()" ontouchstart="moveleft()">
+      LEFT</button>
+    <button onmousedown="moveright()" onmouseup="stopMove()" ontouchstart="moveright()">
+      RIGHT</button><br><br>
+      <button onmousedown="accelerate(-0.25)" onmouseup="accelerate(0.3)">Thor Leap!</button>
+  </div>
+
+  <audio autoplay loop controls>
+    <source src="sounds/forest.mp3"></source>
+  </audio>
 
   <div id="intro">
     <!-- Navigation panel -->
     <nav class="navigation-bar">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="#" onclick="underConstruction()">About Me</a>
       <a href="resume.html">Experience</a>
       <a href="blog.html">Thoughts</a>
+      <a href="game.html">Game</a>
     </nav>
 
 
@@ -26,33 +39,17 @@
       <header>
         <div class="content-wrap">
 
-          <h1>MILO Jump</h1>
-          <h2>Welcome to my website!</h2>
+          <h1>MILO in Asgard</h1>
+          <h2>Welcome to my game!</h2>
 
-          <p>Hello! I created this game for fun with JavaScript! Try to get the highest score without
-          hitting the obstacles! Each reward you hit adds to your journey to become the best MILO in that area.
-        Choose your character and feel free to turn up the music and get comfortable with the click controls. Have fun with Milo! (W3 schools helped w some structure :)</p>
+          <p>Help Milo navigate Asgard and collect thunderbolts to charge up!</p>
         </div>
       </header>
   </div>
 
-  <body>
+  <body onload="startGame()">
 
 
-    <div class="milo-button">
-      <a href="milo-bananas.html">
-      <img src="images/game/milo-sponge.png" alt="Sponge Milo Game" width="100" height="180"
-      </a>
-      <a href="milo-thor.html">
-      <img src="images/game/thor-milo.png" alt="Thor Milo Game" width="125" height="180"
-      </a>
-      <a href="milo-space.html">
-      <img src="images/game/space-milo.png" alt="Space Milo Game" width="165" height="180"
-      </a>
-      <a href="milo-iron.html">
-      <img src="images/game/iron-milo.png" alt="Iron Man Milo Game" width="125" height="180"
-      </a>
-    </div>
 
 
       <!-- ***************** FOOTER  ***************** -->

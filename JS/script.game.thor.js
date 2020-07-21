@@ -7,9 +7,9 @@ var crashSound;
 var myRewards = [];
 
 function startGame() {
-  myGamePiece = new component(35, 60, "images/game/milo-sponge.png", 10, 120, "image");
+  myGamePiece = new component(42, 60, "images/game/thor-milo.png", 10, 120, "image");
   myScore = new component("30px", "Consolas", "white", 280, 40, "text");
-  myBackground = new component(680, 400, "images/MILO-BANANA.png", 0, 0, "background");
+  myBackground = new component(680, 400, "images/game/asgard-bg.jpg", 0, 0, "background");
   crashSound = new sound("sounds/splat.mp3");
   myGameArea.start();
 }
@@ -47,8 +47,8 @@ function component(width, height, color, x, y, type) {
   this.speedX = 0; // speed indicators
   this.speedY = 0;
   this.gravity = 0.03;
-  this.gravitySpeed = 0;
-  this.bounce = 0.6;
+  this.gravitySpeed = 0.3;
+  this.bounce = 0.1;
   this.x = x;
   this.y = y;
   this.update = function() { // handles drawing of the component
@@ -150,7 +150,7 @@ function updateGameArea() { // update for every frame
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 100;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "green", x, 0));
@@ -168,10 +168,10 @@ function updateGameArea() { // update for every frame
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 100;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myRewards.push(new component(35, 40, "images/game/bananas.png", x, height + gap, "image"));
+        myRewards.push(new component(30, 40, "images/game/thunder.png", x, height + gap, "image"));
       }
 
       for (i = 0; i < myRewards.length; i++) {

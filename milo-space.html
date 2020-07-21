@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clayton's Website</title>
+    <title>Milo in Space</title>
     <link rel="icon" type="image/png" href="images/favicon.png"
     <!-- Link for google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-game.css">
-    <script src="JS/script.game.js"></script>
+    <script src="JS/script.game.space.js"></script>
   </head>
+
+  <div class="buttons">
+    <button onmousedown="moveup()" ontouchstart="moveup()">
+      UP</button><br>
+    <button onmousedown="moveleft()" ontouchstart="moveleft()">
+      LEFT</button>
+    <button onmousedown="moveright()" ontouchstart="moveright()">
+      RIGHT</button><br>
+    <button onmousedown="movedown()" ontouchstart="movedown()">
+      DOWN</button><br><br>
+  </div>
 
   <div id="intro">
     <!-- Navigation panel -->
@@ -26,34 +37,16 @@
       <header>
         <div class="content-wrap">
 
-          <h1>MILO Jump</h1>
-          <h2>Welcome to my website!</h2>
+          <h1>MILO in Space</h1>
+          <h2>Welcome to my game!</h2>
 
-          <p>Hello! I created this game for fun with JavaScript! Try to get the highest score without
-          hitting the obstacles! Each reward you hit adds to your journey to become the best MILO in that area.
-        Choose your character and feel free to turn up the music and get comfortable with the click controls. Have fun with Milo! (W3 schools helped w some structure :)</p>
+          <p>Help Milo navigate the gravityless space and grab the stars out of the galaxy!
+            Don't get too close and watch out as obstacles have their own gravity fields that extend past what they look like.</p>
         </div>
       </header>
   </div>
 
-  <body>
-
-
-    <div class="milo-button">
-      <a href="milo-bananas.html">
-      <img src="images/game/milo-sponge.png" alt="Sponge Milo Game" width="100" height="180"
-      </a>
-      <a href="milo-thor.html">
-      <img src="images/game/thor-milo.png" alt="Thor Milo Game" width="125" height="180"
-      </a>
-      <a href="milo-space.html">
-      <img src="images/game/space-milo.png" alt="Space Milo Game" width="165" height="180"
-      </a>
-      <a href="milo-iron.html">
-      <img src="images/game/iron-milo.png" alt="Iron Man Milo Game" width="125" height="180"
-      </a>
-    </div>
-
+  <body onload="startGame()">
 
       <!-- ***************** FOOTER  ***************** -->
       <footer>
@@ -63,7 +56,7 @@
           <!-- Social media and contact links -->
           <ul class="contact-list">
             <li><a href="mailto:email@yan.cl@northeastern.edu">yan.cl@northeastern.edu</a></li>
-            <li><a href="#" target="_blank">Main Page</a></li>
+            <li><a href="index.html" target="_blank">Main Page</a></li>
             <li><a href="https://www.linkedin.com/in/clayan/" target="_blank">LinkedIn</a></li>
             <li><a href="blog.html" target="_blank">Blog</a></li>
           </ul>
