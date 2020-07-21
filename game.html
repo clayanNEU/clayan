@@ -10,9 +10,39 @@
     <link rel="stylesheet" href="css/styles-game.css">
     <script src="JS/script.game.js"></script>
   </head>
-  <body onload="startGame()">
+
+  <div id="intro">
+    <!-- Navigation panel -->
+    <nav class="navigation-bar">
+      <a href="#">Home</a>
+      <a href="#" onclick="underConstruction()">About Me</a>
+      <a href="resume.html">Experience</a>
+      <a href="blog.html">Thoughts</a>
+    </nav>
+
+
+    <main>
+      <!-- ***********************  TITLE  *********************** -->
+      <header>
+        <div class="content-wrap">
+
+          <h1>MILO Jump</h1>
+          <h2>Welcome to my website!</h2>
+
+          <p>Hello! I created this game for fun with JavaScript! Try to get the highest score without
+          hitting the obstacles! Each reward you hit adds to your journey to become the best MILO in that area.
+        Choose your character and feel free to turn up the music and get comfortable with the click controls. Have fun with Milo! (W3 schools helped w some structure :)</p>
+        </div>
+      </header>
+  </div>
+
+  <body>
+
+
+    
 
     <div class="buttons">
+      <button onmousedown="startGame()">Start Game</button>
       <button onmousedown="moveup()" onmouseup="stopMove()" ontouchstart="moveup()">
         UP</button><br><br>
       <button onmousedown="moveleft()" onmouseup="stopMove()" ontouchstart="moveleft()">
@@ -28,27 +58,7 @@
       <source src="sounds/forest.mp3"></source>
     </audio>
 
-    <!-- Navigation panel -->
-    <nav class="navigation-bar">
-      <a href="#">Home</a>
-      <a href="#" onclick="underConstruction()">About Me</a>
-      <a href="resume.html">Experience</a>
-      <a href="blog.html">Thoughts</a>
-    </nav>
 
-
-    <main>
-      <!-- ***********************  TITLE  *********************** -->
-      <header>
-        <div class="content-wrap">
-
-          <h1>Clayton Yan</h1>
-          <h2>Welcome to my website!</h2>
-
-          <p>I created this website to document some of my work and thoughts, along with connect with anyone who finds anything interesting here.
-            To give it a custom feel and as a WIP, I am starting this from scratch and adding updates as I go. Let me know what you think about its design!</p>
-        </div>
-      </header>
 
 
 

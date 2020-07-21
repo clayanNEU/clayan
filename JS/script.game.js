@@ -7,7 +7,7 @@ var crashSound;
 var myRewards = [];
 
 function startGame() {
-  myGamePiece = new component(35, 60, "images/milo-sponge.png", 10, 120, "image");
+  myGamePiece = new component(35, 60, "images/game/milo-sponge.png", 10, 120, "image");
   myScore = new component("30px", "Consolas", "white", 280, 40, "text");
   myBackground = new component(680, 400, "images/MILO-BANANA.png", 0, 0, "background");
   crashSound = new sound("sounds/splat.mp3");
@@ -21,6 +21,7 @@ var myGameArea = {
     this.canvas.height = 400;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    // document.getElementById("intro").insertAdjacentHTML("afterend", this.canvas);
     // counts frames
     this.frameNo = 0;
     // run this every 20th milisecond
@@ -170,7 +171,7 @@ function updateGameArea() { // update for every frame
         minGap = 80;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myRewards.push(new component(35, 40, "images/bananas.png", x, height + gap, "image"));
+        myRewards.push(new component(35, 40, "images/game/bananas.png", x, height + gap, "image"));
       }
 
       for (i = 0; i < myRewards.length; i++) {
