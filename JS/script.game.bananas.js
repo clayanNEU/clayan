@@ -150,7 +150,7 @@ function updateGameArea() { // update for every frame
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 90;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "green", x, 0));
@@ -168,7 +168,7 @@ function updateGameArea() { // update for every frame
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 90;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myRewards.push(new component(35, 40, "images/game/bananas.png", x, height + gap, "image"));

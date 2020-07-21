@@ -2,12 +2,22 @@
 
 canvas {
   border: 1px solid #d3d3d3;
-  background-color: #f1f1f1;
+  background-color: black;
+  padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
 }
 
 .buttons {
   text-align: center;
   width: 480px;
+  padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
 }
 
 /* GLOBAL STYLES --------------------------------------------------------- */
