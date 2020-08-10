@@ -1,0 +1,136 @@
+
+/* GLOBAL STYLES --------------------------------------------------------- */
+
+html {
+  box-sizing: border-box; /* ensures that padding and border are included in
+  the total width and height of the element. */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* inherit allows child elements to inherit the parent's
+  box-sizing instead of always resetting to border-box */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* refers to google fonts */
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: yellow; /* all Links will be this color */
+}
+
+
+/* NAVIGATION BAR STYLES ---------------------------------------------------*/
+.navigation-bar {
+  width: 100%;
+  background-color: red;
+  overflow: auto;
+  background-image: radial-gradient(closest-side at 14% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+
+}
+/* Navigation links */
+.navigation-bar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* links on mouse-over */
+.navigation-bar a:hover {
+  opacity: 0.2;
+  text-decoration: underline;
+}
+/* style the active link */
+.active {
+  background-color: grey;
+}
+
+
+h1 {
+  font-size: 70px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.content-wrap {
+  max-width: 800px; /* max even when browser window is larger */
+  width: 85%; /* so when sizing down, content is 85% of width */
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* PROFILE STYLES --------------------------------------------------------- */
+header {
+  background: rgb(179, 202, 230);
+  color: white;
+}
+/* CONTENT STYLES ---------------------------------------------------------*/
+
+
+/* Contact Styles --------------------------------------------------------- */
+
+footer {
+  background: rgb(179, 202, 230);
+  color: white;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list a {
+  padding: 15px; /* adds extra click space */
+  display: inline-block; /* adjust its position veritcally and horizontally */
+}
+
+/* Responsive Styles ---------------------------------------------- */
+
+@media screen and (min-width: 750px){
+
+  header, footer {
+    text-align: center;
+  }
+
+
+  .contact-list { /* display with flex horizontally if bigger than 750 */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) { /* add it for the smaller screen sizes */
+  .navigation-bar a {
+    float: none; /* clear float */
+    display: block;
+    background-image: radial-gradient(closest-side at 50% 50%, rgb(105, 193, 204) 60%, rgb(127, 215, 225));
+  }
+
+  h1 {
+    font-size: 45px; /* smaller font size for smaller screen */
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+
+  .contact-list a {
+    padding: 5px; /* less padding when stacked so looks nicer */
+  }
+}
