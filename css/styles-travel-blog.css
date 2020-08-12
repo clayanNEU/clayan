@@ -81,6 +81,32 @@ header {
 }
 /* CONTENT STYLES ---------------------------------------------------------*/
 
+.sushi-post-upper img {
+  width: 40%; /*percentage of container*/
+  height: auto;
+  object-fit: cover; /*preserve ratio*/
+  float: left;
+
+}
+
+.sushi-post-lower img {
+  width: 40%; /*percentage of container*/
+  height: auto;
+  object-fit: cover; /*preserve ratio*/
+  float: right;
+}
+
+.sushi-post-mid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sushi-post-lower {
+  overflow: auto;
+}
 
 /* Contact Styles --------------------------------------------------------- */
 
