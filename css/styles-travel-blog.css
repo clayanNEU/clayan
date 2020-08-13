@@ -117,6 +117,21 @@ header {
   color: rgb(255, 233, 202);
 }
 
+.sushi-post-mid {
+  display: grid;
+  height: 400px;
+}
+
+.sushi-post-mid div {
+  grid-column: 1;
+  grid-row: 1;
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: var(--gray);
+  transition: opacity 0.2s;
+}
+
 /* Contact Styles --------------------------------------------------------- */
 
 footer {
