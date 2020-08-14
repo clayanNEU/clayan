@@ -131,6 +131,19 @@ header {
   transition: opacity 0.1s;
 }
 
+#post-8-13-2020 #left-tempura img {
+  width: 60%;
+  height: auto;
+}
+
+#post-8-13-2020 #right-fish img {
+  width: 40%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+}
 
 /* Contact Styles --------------------------------------------------------- */
 
