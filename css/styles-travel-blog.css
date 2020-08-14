@@ -82,24 +82,23 @@ header {
 }
 /* CONTENT STYLES ---------------------------------------------------------*/
 
-.sushi-post-upper img {
+#sushi-post-upper img {
   width: 40%; /*percentage of container*/
   height: auto;
   object-fit: cover; /*preserve ratio*/
   float: left;
   margin: 0 15px 10px 0;
-
 }
 
-.sushi-post-lower img {
-  width: 40%; /*percentage of container*/
+#sushi-post-lower img {
+  width: 40%;
   height: auto;
-  object-fit: cover; /*preserve ratio*/
+  object-fit: cover;
   float: right;
   margin: 28px 0 10px 15px;
 }
 
-.sushi-post-mid img {
+#sushi-post-mid img {
   width: 100%;
   height: auto;
   display: block;
@@ -107,7 +106,7 @@ header {
   margin-right: auto;
 }
 
-.sushi-post-lower {
+#sushi-post-lower {
   overflow: auto;
 }
 
@@ -117,12 +116,12 @@ header {
   color: rgb(255, 233, 202);
 }
 
-.sushi-post-mid {
+#sushi-post-mid {
   display: grid;
   height: 400px;
 }
 
-.sushi-post-mid div {
+#sushi-post-mid div {
   grid-column: 1;
   grid-row: 1;
   background-size: cover;
@@ -131,6 +130,7 @@ header {
   background-color: var(--gray);
   transition: opacity 0.1s;
 }
+
 
 /* Contact Styles --------------------------------------------------------- */
 
