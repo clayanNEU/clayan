@@ -129,7 +129,7 @@ header {
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: var(--gray);
-  transition: opacity 0.2s;
+  transition: opacity 0.1s;
 }
 
 /* Contact Styles --------------------------------------------------------- */
