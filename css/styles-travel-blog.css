@@ -136,12 +136,22 @@ header {
   width: 100%;
   height: auto;
   object-fit: cover;
+  padding-right: 5px;
+}
+
+#left-tempura p {
+  padding-right: 5px;
 }
 
 #right-fish img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  padding-left: 5px;
+}
+
+#right-fish p {
+  padding-left: 5px; 
 }
 
 .flex-container {
@@ -203,7 +213,7 @@ footer {
   }
 
   .flex-container {
-      display:block;
+      display:block; /*block format for small screens (tempura/fish post)*/
   }
 
 
