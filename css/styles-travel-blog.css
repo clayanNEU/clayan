@@ -151,7 +151,7 @@ header {
 }
 
 #right-fish p {
-  padding-left: 5px; 
+  padding-left: 5px;
 }
 
 .flex-container {
@@ -162,6 +162,52 @@ header {
   text-align: justify;
   background-color: rgb(218, 200, 206);
   color: rgb(253, 239, 242);
+}
+
+#post-8-30-2020 {
+  background-image: url(../travel-images/senjogi-back.jpg);
+  background-size: cover; /* ensure it is covered */
+  color: rgb(216, 256, 244);
+}
+
+.grid-container-9 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.grid-container-9 > div {
+  background-color: rgba(160, 200, 190, 0.75);
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 16px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-item-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.grid-item-3 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.grid-item-4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.grid-item-5 {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 /* Contact Styles --------------------------------------------------------- */
