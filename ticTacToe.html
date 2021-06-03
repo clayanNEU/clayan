@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milo in Space</title>
+    <link rel="icon" type="image/png" href="images/favicon.png"
+    <!-- Link for google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-tictactoe.css">
+    <script src="JS/script.game.tictactoe.js"></script>
+  </head>
+
+
+  <div id="intro">
+    <!-- Navigation panel -->
+    <nav class="navigation-bar">
+      <a href="index.html">Home</a>
+      <a href="#" onclick="underConstruction()">About Me</a>
+      <a href="resume.html">Experience</a>
+      <a href="blog.html">Thoughts</a>
+      <a href="game.html">Game</a>
+    </nav>
+
+
+    <main>
+      <!-- ***********************  TITLE  *********************** -->
+      <header>
+        <div class="content-wrap">
+
+          <h1>TicTacToe</h1>
+          <h2>Welcome to my game!</h2>
+        </div>
+      </header>
+  </div>
+
+  <body>
+    <div class="board">
+      <section>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+      </section>
+      <section>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+      </section>
+      <section>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+        <span class="box1">
+          <button id="box">Free<button/>
+        </span>
+      </section>
+    </div>
+
+    <script>
+    document.getElementsByClassName("box1").addEventListener("click", myFunction);
+
+    function myFunction() {
+      document.getElementsByClassName("box1").innerHTML = "YOU CLICKED ME!";
+    }
+
+    </script>
+
+
+      <!-- ***************** FOOTER  ***************** -->
+      <footer>
+        <div class="content-wrap">
+          <h2>Contact Me!</h2>
+
+          <!-- Social media and contact links -->
+          <ul class="contact-list">
+            <li><a href="index.html" target="_blank">Main Page</a></li>
+            <li><a href="mailto:email@yan.cl@northeastern.edu">yan.cl@northeastern.edu</a></li>
+            <li><a href="https://www.linkedin.com/in/clayan/" target="_blank">LinkedIn</a></li>
+            <li><a href="blog.html" target="_blank">Blog</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
